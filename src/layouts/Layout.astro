@@ -1,3 +1,8 @@
+---
+import "../styles/global.css"
+import Navigation from "../components/Navigation.astro"
+---
+
 <!doctype html>
 <html lang="en">
 	<head>
@@ -8,6 +13,7 @@
 		<title>Astro Basics</title>
 	</head>
 	<body>
+		<Navigation />
 		<slot />
 	</body>
 </html>
@@ -20,3 +26,4 @@
 		height: 100%;
 	}
 </style>
+
