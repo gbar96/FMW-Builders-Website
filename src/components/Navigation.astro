@@ -1,22 +1,18 @@
 ---
 
 ---
-<div class="nav-links" >
-    <a href="/">Home</a>
-    <a href="home">FakeHome</a>
-    <a href="/about/">Our Team</a>
-    <a href="/how-we-work">How We Work</a>
-    <a href="/blog/">Blog</a>
-    <a href="/contact/">Contact</a>
-</div>
-
-<style>
-.nav-links {
-    background-color: darkslategrey;
-    padding: 2rem;
-    padding: flex;
-}
-
-</style>
-
-
+<nav class="flex items-center justify-between bg-slate-800 px-6 py-6 text-neutral-50">
+<!-- Logo / Brand Check global.css for nav-link properties -->
+    <div class="text-3xl font-extrabold font-sans">
+        <a href="/" class="nav-link">FMW Builders</a>
+    
+    <!-- Navigation Links Check global.css for nav-link properties-->
+    </div>
+    <div class="flex gap-x-6 font-bold text-base">
+        <a href="home" class="nav-link">TestHome</a>
+        <a href="/about/" class="nav-link">Our Team</a>
+        <a href="/how-we-work" class="nav-link">How We Work</a>
+        <a href="/blog/" class="nav-link">Blog</a>
+        <a href="/contact/" class="nav-link">Contact</a>
+    </div>
+</nav>

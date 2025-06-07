@@ -1,1 +1,30 @@
 @import "tailwindcss";
+
+
+/*The @theme is specifically for Astro. To have a theme that works for other frame works
+you would need to do the following:
+@layer Theme {
+    :root {
+    Enter Tailwinds Stuff (same as below)
+        }
+    you would then have to change your html css to update the changes it would look like this format:
+    <body class="bg-[var(--color-background)] text-[var(--color-primary)]">
+    instead of:
+    body class="bg-background text-primary" 
+    Astro's Tailwind integration is slicker but comes with the downside of not rendering colors on this
+    page but does when you are using Tailwinds in the HTML tags*/
+
+@theme {
+    --color-primary: #1C3B2A;   /*Deep Green*/
+    --color-secondary: #D3B88C; /*Warm tan*/
+    --color-background: #FAF9F5; /*Off-White*/
+    --color-accent: #B0613D;   /*Earthy terracotta*/  
+    --color-dark: #2E2E2E;  /*Dark Mode*/
+
+}
+
+@layer utilities {
+    .nav-link {
+        @apply hover:text-neutral-400 transition-colors duration-200;
+    }
+}
