@@ -1,11 +1,81 @@
 ---
-import TestLayout from "../layouts/TestLayout.astro"
+import "../styles/global.css"
+import Head from "../components/Head.astro";
+import Navigation from "../components/Navigation.astro";
+import Hero from "../components/Hero.astro";
+import SectionA from "../components/SectionA.astro"
+import SectionB from "../components/SectionB.astro"
+import SectionC from "../components/SectionC.astro"
+import SectionD from "../components/SectionD.astro";
+import Footer from "../components/Footer.astro";
+
+const pageTitle = "Test Page";
 
 ---
 
-<TestLayout>
-    <h1 class="bg-primary text-black">This is a Test Page</h1>
-    <div class="bg-accent text-black">
-    <p>This is a test paragraph to test out Tailwind Designs</p>
-    </div>
-</TestLayout>
+<html lang="en">
+    <Head pageTitle={pageTitle}>
+        
+    </Head>
+  <body>
+    <Navigation />
+    <Hero 
+        title="Thoughtful Design. Expert Craftsmanship." 
+        subtitle="Custom Designs and Construction"
+        image="/images/trinity-pool-2-home-hero.jpg"/>
+    <SectionA image="/images/floor-plan.jpg">
+        <h1> This is a Section-A Header</h1>
+        <p>This is a Section-A paragraph</p> 
+    </SectionA> 
+    
+    <SectionC image1="/images/floor-plan.jpg" image2="/images/floor-plan.jpg" image3="/images/floor-plan.jpg">
+        <div slot="SectionC-1">
+            <h2>This is a Section-C Header</h2>
+            <p>This is a Section-C Paragraph</p>
+            </br>
+            <a href="/blog/" class="text-black border rounded-2xl px-4 py-2 uppercase font-semibold font-sans" >Visit our Blog</a>
+        </div>
+
+        <div slot="SectionC-2">
+            <h2>This is a Section-C Header</h2>
+            <p>This is a Section-C Paragraph</p>
+        </div>
+
+        <div slot="SectionC-3">
+            <h2>This is a Section-C Header</h2>
+            <p>This is a Section-C Paragraph</p>
+        </div>
+    </SectionC>
+    
+    <SectionB image="/images/floor-plan.jpg">
+        <h1> This is a Section-B Header</h1>
+        <p>This is a section-B paragraph</p>
+    </SectionB>
+    <SectionC image1="/images/floor-plan.jpg" image2="/images/floor-plan.jpg" image3="/images/floor-plan.jpg">
+        <div slot="SectionC-1">
+            <h2>This is a Section-C Header</h2>
+            <p>This is a Section-C Paragraph</p>
+        </div>
+
+        <div slot="SectionC-2">
+            <h2>This is a Section-C Header</h2>
+            <p>This is a Section-C Paragraph</p>
+        </div>
+
+        <div slot="SectionC-3">
+            <h2>This is a Section-C Header</h2>
+            <p>This is a Section-C Paragraph</p>
+        </div>
+    </SectionC>
+    <SectionD>
+        <h1>This is a Section D Header</h1>
+        <p>This is a Section D paragraph</p>
+        <br/>
+        <a href="/contact/" class="btn btn-primary text-neutral-50">Contact Us</a>
+    </SectionD>
+    <Footer />
+    <script>
+        import "../scripts/menu.js"
+    </script>
+  </body>
+</html>

@@ -15,16 +15,58 @@ you would need to do the following:
     page but does when you are using Tailwinds in the HTML tags*/
 
 @theme {
-    --color-primary: #1C3B2A;   /*Deep Green*/
+    --color-primary: oklch(29.3% 0.066 243.157);   /* Sky-950 or Deep Green #1C3B2A*/
     --color-secondary: #D3B88C; /*Warm tan*/
     --color-background: #FAF9F5; /*Off-White*/
-    --color-accent: #B0613D;   /*Earthy terracotta*/  
+    --color-background-2: #f5f2f2;/*Another OFf-White*/
+    
+    --color-accent: #B0613D;   /*Earthy terracotta*/
+    --color-accent-2:#cc3d33; /*Cherokee Red*/  
     --color-dark: #2E2E2E;  /*Dark Mode*/
+    --color-button: oklch(74.6% 0.16 232.661); /*sky-400*/
+    
 
 }
 
 @layer utilities {
     .nav-link {
-        @apply hover:text-neutral-400 transition-colors duration-200;
+        @apply hover:text-neutral-400 transition-colors duration-300;
     }
+}
+
+@layer base {
+    h1 {
+        @apply text-4xl font-bold font-sans text-center
+    }
+
+    h2 {
+        @apply text-2xl font-semibold font-sans
+    }
+
+    h3 {
+        @apply text-xl font-semibold font-sans
+    }
+
+    /* for text boxes like entering email addresses or passwords */
+    input[type="text"] {
+        @apply px-4 py-2 border border-slate-300 rounded-sm outline-none
+
+    }
+    /*.btn is for buttons*/
+    .btn {
+        @apply px-2 py-1 rounded-md
+
+    }
+
+    .btn-primary {
+        @apply  bg-accent-2 
+
+    }
+
+    .btn-secondary {
+        @apply bg-button text-black 
+
+    }
+
+   
 }

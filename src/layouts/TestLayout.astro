@@ -1,7 +1,8 @@
 ---
 // src/layouts/BaseLayout.astro
-const { title = "My Site" } = Astro.props;
-import Navigation from "../components/Navigation.astro";
+const { title = "Test Page" } = Astro.props;
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
 import "../styles/global.css";
 ---
 
@@ -13,7 +14,8 @@ import "../styles/global.css";
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   </head>
   <body>
-    <Navigation />
+    <Header />
     <slot />
+    <Footer />
   </body>
 </html>

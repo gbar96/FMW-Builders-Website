@@ -1,25 +1,104 @@
 ---
 import Social from "./Social.astro"
 ---
+<footer class="w-full h-full bg-primary text-neutral-50">
+  <section class="grid grid-cols-1 md:grid-cols-2 gap-6 px-6 py-10">
 
-<style>
-    .footerClass1 {
-        display: flex;
-        gap: 1rem;
-        margin-top: 2rem;
-    }
-    .footerClass2 {
-        display: flex;
-        gap: 0.5 rem;
-        margin-top: 0.5rem;
-    }
-</style>
-
-<footer>
-    <div class="footerClass1">
-        <p>Follow us</p>
+    <!-- Left Column -->
+    <div class="flex flex-col space-y-4 md:space-y-8">
+      <div class="flex justify-center md:justify-start">
+        <a href="/" class="nav-link"><h1>FMW Builders</h1></a>
+      </div>
+      <div class="flex flex-wrap justify-center md:justify-start gap-4">
+        <!--TestHome to be deleted from nav before build-->
+        <a href="/home/" class="nav-link">TestHome</a>
+        
+        <a href="/services/" class="nav-link">Services</a>
+        <a href="/about/" class="nav-link">Our Team</a>
+        <a href="/how-we-work" class="nav-link">How We Work</a>
+        <a href="/projects/" class="nav-link">Projects</a>
+        <a href="/blog/" class="nav-link">Blog</a>
+        <a href="/contact/" class="nav-link">Contact</a>
+        
+        <!--testPage to be deleted from nav before build-->
+        <a href="/testPage/" class="nav-link">TestPage</a>
+      </div>
     </div>
-    <div>
+
+    <!-- Right Column -->
+    <div class="flex flex-col space-y-4 md:space-y-8">
+      <div class="flex justify-center md:justify-end gap-4 capitalize">
         <Social platform="instagram" username="FMWBuilders" />
+        <Social platform="github" username="gbar96" />
+        <Social platform="youtube" username="astrodotbuild" />
+      </div>
+      <div class="flex flex-wrap justify-center md:justify-end">
+        <p>© 2025 FMW Builders. All rights reserved.</p>
+      </div>
     </div>
+
+  </section>
 </footer>
+
+<!--
+<footer class="w-full h-full bg-primary text-neutral-50">
+
+    <section class="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 gap-6 px-6 py-10">
+        <div class="flex flex-col items-center text-center md:items-start md:text-left space-y-2">
+            <h1>
+                FMW Builders
+            </h1>
+        </div>
+        <div class="flex flex-col items-center text-center md:items-end md:text-right space-y-2">
+            <Social platform="instagram" username="FMWBuilders" />
+            <Social platform="github" username="gbar96" />
+            <Social platform="youtube" username="astrodotbuild" />          
+        </div>
+        <div class="flex flex-col items-center text-center md:items-start md:text-left space-y-2">
+            <p>Projects</p>
+            <p>Blog</p>
+            <p>Contact</p>
+            <p>Services</p>
+            <p>Our Team</p>
+            <p>How we Work</p>
+        </div>
+           
+        <div class="flex flex-col items-center text-center md:items-end md:text-right space-y-2">
+            <p>© 2025 FMW Builders. All rights reserved.</p>
+        </div>
+    </section>
+</footer>
+-->
+
+<!--
+<footer class="w-full h-full bg-primary text-neutral-50">
+
+    <section class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6 px-6 py-10">
+        <div class="flex flex-col items-center text-center md:items-start md:text-left space-y-2">
+            <p>Phone number: (800) 888-1234</p>
+            <p>Email: contact@FMWbuilders.com</p>
+            <button class="btn btn-primary mt-2">Contact us</button>
+        </div>
+        <div class="flex flex-col items-center text-center md:items-start md:text-left space-y-2">
+            <p>Services</p>
+            <p>Our Team</p>
+            <p>How we Work</p>
+           
+        </div>
+        <div class="flex flex-col items-center text-center md:items-start md:text-left space-y-2">
+            <p>Projects</p>
+            <p>Blog</p>
+            <p>Contact</p>
+        </div>
+           
+        <div class="flex flex-col items-center text-center md:items-start md:text-left space-y-2">
+            <Social platform="instagram" username="FMWBuilders" />
+            <Social platform="github" username="gbar96" />
+            <Social platform="youtube" username="astrodotbuild" />
+        </div>
+    </section>
+    <section class="flex flex-col items-center gap-6 px-4 py-8 ">
+        <p>© 2025 FMW Builders. All rights reserved.</p>
+    </section>
+</footer> 
+-->

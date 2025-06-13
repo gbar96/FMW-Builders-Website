@@ -1,18 +1,62 @@
 ---
 
 ---
-<nav class="flex items-center justify-between bg-slate-800 px-6 py-6 text-neutral-50">
-<!-- Logo / Brand Check global.css for nav-link properties -->
+
+<nav class="relative flex items-center justify-between bg-primary px-8 py-6 text-neutral-50">
+    <!-- Logo -->
     <div class="text-3xl font-extrabold font-sans">
         <a href="/" class="nav-link">FMW Builders</a>
-    
-    <!-- Navigation Links Check global.css for nav-link properties-->
     </div>
-    <div class="flex gap-x-6 font-bold text-base">
-        <a href="home" class="nav-link">TestHome</a>
+
+    <!-- Right side (hamburger + nav links) -->
+    <div class="flex items-center gap-x-6">
+        <!-- Hamburger Button -->
+        <button
+            id="hamburger-button"
+            class="lg:hidden flex flex-col justify-between w-6 h-5 relative z-50
+                transition-colors duration-300 hover:text-neutral-400 cursor-pointer"
+            aria-label="Toggle menu"
+    >
+            <!-- Top Line -->
+            <span class="top-line block h-0.5 w-full bg-current transition-all duration-300 origin-center"></span>
+
+            <!-- Middle Line-A -->
+            <span class="middle-line-a absolute origin-center top-1/2 left-0 block h-0.5 w-full bg-current transition-all duration-300 -translate-y-1/2"></span>
+
+            <!-- Middle Line-B -->
+            <span class="middle-line-b absolute origin-center top-1/2 left-0 block h-0.5 w-full bg-current transition-all duration-300 -translate-y-1/2"></span>
+
+            <!-- Bottom Line -->
+            <span class="bottom-line block h-0.5 w-full bg-current transition-all duration-300 origin-center"></span>
+        </button>
+
+        <!-- Nav Links -->
+        <div class="hidden lg:flex gap-x-6 font-bold text-base">
+            <a href="/home/" class="nav-link">TestHome</a>
+            <a href="/services/" class="nav-link">Services</a>
+            <a href="/about/" class="nav-link">Our Team</a>
+            <a href="/how-we-work" class="nav-link">How We Work</a>
+            <a href="/projects/" class="nav-link">Projects</a>
+            <a href="/blog/" class="nav-link">Blog</a>
+            <a href="/contact/" class="nav-link">Contact</a>
+            <a href="/testPage/" class="nav-link">TestPage</a>
+        </div>
+    </div>
+
+
+    <!-- Dropdown Mobile Menu (placed *below* nav) -->
+    <div
+        id="mobile-menu"
+        class="lg:hidden hidden flex flex-col items-start gap-y-4 font-bold text-base bg-primary text-neutral-50 px-8 py-4 overflow-hidden transition-[height] duration-300 ease-in-out absolute top-full left-0 w-full z-40"
+        style="box-sizing: border-box; height: 0"
+    >
+        <a href="/home/" class="nav-link">TestHome</a>
+        <a href="/services/" class="nav-link">Services</a>
         <a href="/about/" class="nav-link">Our Team</a>
         <a href="/how-we-work" class="nav-link">How We Work</a>
+        <a href="/projects/" class="nav-link">Projects</a>
         <a href="/blog/" class="nav-link">Blog</a>
         <a href="/contact/" class="nav-link">Contact</a>
+        <a href="/testPage/" class="nav-link">TestPage</a>
     </div>
 </nav>

@@ -1,0 +1,21 @@
+---
+// src/components/Hero.astro
+const { image, } = Astro.props;
+---
+
+<section class="relative min-h-screen flex items-center justify-center bg-background text-neutral-50">
+    <!-- Background Image -->
+    <img
+        src={image}
+        alt="Blue background overlayed on top of home design drawings"
+        class="rotate-180 absolute inset-0 w-full h-full object-cover z-0 opacity-50"
+        />
+    <!-- Background Overlay -->
+    <div class=" absolute inset-0 w-full h-full object-cover z-10 bg-primary opacity-80">
+
+    </div>
+        <!-- Overlay Content -->
+    <div class="relative z-50 text-center px-6 max-w-4xl">
+      <slot />
+    </div>
+</section>

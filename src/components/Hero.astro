@@ -1,0 +1,23 @@
+---
+// src/components/Hero.astro
+interface Props {
+    title: string;
+    subtitle?: string;
+    image: string;
+}
+const {title, subtitle, image, } = Astro.props;
+---
+
+<section class="relative min-h-screen flex items-center justify-center bg-black text-neutral-50">
+    <!-- Background Image -->
+     <img
+        src={image}
+        alt="Pictures of various construciton projects"
+        class="absolute inset-0 w-full h-full object-cover z-0 opacity-80"
+        />
+    <!-- Overlay Content -->
+     <div class="relative z-10 text-center px-6 max-w-4xl">
+        <h1 class="text-4xl md:text-6x1 font-bold mb-4">{title}</h1>
+        {subtitle && <p class="text-lg md:text-2xl">{subtitle}</p>}
+     </div>
+</section>
