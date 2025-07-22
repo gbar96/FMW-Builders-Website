@@ -2,27 +2,36 @@
 const { image1, image2, image3 } = Astro.props;
 ---
 
-<section class="grid grid-cols-1 md:grid-cols-2 gap-8 px-24 py-6 bg-neutral-50">
-    
-    <div class="flex image-center justify-center w-full h-auto rounded-lg">
-        <img src={image1} alt="Image 1" />
-    </div>
-    <div class="flex flex-col p-6 bg-neutral-50 bg-opacity-80 rounded-lg">
-        <slot name="SectionC-1" />
-    </div>
-  
-    <div class="flex flex-col px-6 py-6 bg-neutral-50 bg-opacity-80 rounded-lg">
-        <slot name="SectionC-2"/>
-    </div>
-     <div class="flex image-center justify-center w-full h-auto rounded-lg">
-        <img src={image2} alt="Image 1" />
-    </div>
+<section class="bg-background-2 text-black px-8 py-16 space-y-16">
 
-    <div class="flex image-center justify-center w-full h-auto rounded-lg">
-        <img src={image3} alt="Image 1" />
+  <!-- Row 1 -->
+  <div class="flex flex-col md:flex-row items-center gap-8">
+    <div class="w-full md:w-1/2">
+      <img src={image1} alt="Image 1" class="w-full rounded shadow" />
     </div>
-    <div class="flex flex-col p-6 bg-neutral-50 bg-opacity-80 rounded-lg">
-        <slot name="SectionC-3"/>
+    <div class="w-full md:w-1/2 text-center">
+      <slot name="SectionC-1" />
     </div>
+  </div>
+
+  <!-- Row 2 -->
+  <div class="flex flex-col md:flex-row-reverse items-center gap-8">
+    <div class="w-full md:w-1/2">
+      <img src={image2} alt="Image 2" class="w-full rounded shadow" />
+    </div>
+    <div class="w-full md:w-1/2 text-center">
+      <slot name="SectionC-2" />
+    </div>
+  </div>
+
+  <!-- Row 3 -->
+  <div class="flex flex-col md:flex-row items-center gap-8">
+    <div class="w-full md:w-1/2">
+      <img src={image3} alt="Image 3" class="w-full rounded shadow" />
+    </div>
+    <div class="w-full md:w-1/2 text-center">
+      <slot name="SectionC-3" />
+    </div>
+  </div>
 
 </section>

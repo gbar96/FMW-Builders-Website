@@ -19,7 +19,8 @@ you would need to do the following:
     --color-secondary: #D3B88C; /*Warm tan*/
     --color-background: #FAF9F5; /*Off-White*/
     --color-background-2: #f5f2f2;/*Another OFf-White*/
-    
+    --color-background-3: #fafafa;/*another off-white*/
+    --color-background-4: #373b37;/*A weird dull green*/
     --color-accent: #B0613D;   /*Earthy terracotta*/
     --color-accent-2:#cc3d33; /*Cherokee Red*/  
     --color-dark: #2E2E2E;  /*Dark Mode*/

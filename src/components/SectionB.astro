@@ -3,7 +3,7 @@
 const { image, } = Astro.props;
 ---
 
-<section class="relative min-h-screen flex items-center justify-center bg-background text-black">
+<section class="relative min-h-screen flex items-center justify-center bg-background text-neutral-50">
     <!-- Background Image -->
     <img
         src={image}
@@ -11,7 +11,7 @@ const { image, } = Astro.props;
         class="rotate-180 absolute inset-0 w-full h-full object-cover z-0 opacity-50"
         />
     <!-- Background Overlay -->
-    <div class=" absolute inset-0 w-full h-full object-cover z-10 bg-stone-300 opacity-80">
+    <div class=" absolute inset-0 w-full h-full object-cover z-10 bg-background-4 opacity-85">
 
     </div>
         <!-- Overlay Content -->
